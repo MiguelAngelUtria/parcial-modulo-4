@@ -32,4 +32,10 @@ jobs:
         aws-region: us-west-1
 
     - name: Deploy to S3
+      # Tu bucket actual
       run: aws s3 sync ./frontend/dist s3://parcial-stats-mod4-2f481af2 --delete
+
+    # --- AGREGA ESTO AL FINAL ---
+    - name: Invalidate CloudFront
+      # Este comando borra la memoria caché para que se vea el cambio al instante
+      run: aws cloudfront create-invalidation --distribution-id E1WUSDLTLGROTX --paths "/*"
