@@ -44,7 +44,7 @@ function App() {
 
     try {
       // 1. URL REAL DE TU COMPAÑERO (Módulo 3)
-      const API_BASE = "https://fsfo50tcdh.execute-api.us-west-1.amazonaws.com";
+      const API_BASE = "https://7flcye0chf.execute-api.us-west-1.amazonaws.com/";
       const urlCompleta = `${API_BASE}/stats/${codigo}`;
 
       console.log(`📡 Consultando: ${urlCompleta}`);
